@@ -28,9 +28,8 @@
 	<div class="container hero-inner">
 		<div class="hero-content">
 			<PixelLabel text="Kelowna barber" />
-			<h1>
-				The geek<br />with the sleek mullet<span class="pixel-cursor" aria-hidden="true"></span>
-			</h1>
+			<h1>Spurgeon's Barber</h1>
+			<p class="hero-tagline">The geek with the sleek mullet<span class="pixel-cursor" aria-hidden="true"></span></p>
 			<p class="hero-sub">
 				Precision cuts from a competition-trained barber who geeks out on craft. Curly hair specialist. Traditional styles expert. Based at Good Vibes Barbershop, Kelowna.
 			</p>
@@ -41,51 +40,92 @@
 		</div>
 		<div class="hero-art" aria-hidden="true">
 			<div class="pixel-scene">
-				<!-- Pixel art scissors -->
-				<svg class="pixel-scissors" width="120" height="120" viewBox="0 0 16 16" shape-rendering="crispEdges">
-					<!-- Handle left -->
-					<rect x="1" y="10" width="2" height="2" fill="var(--accent)"/>
-					<rect x="2" y="11" width="2" height="2" fill="var(--accent)"/>
-					<rect x="3" y="12" width="2" height="2" fill="var(--accent)"/>
-					<rect x="0" y="11" width="2" height="2" fill="var(--brown)"/>
-					<rect x="1" y="12" width="2" height="1" fill="var(--brown)"/>
-					<!-- Blade left -->
-					<rect x="4" y="9" width="1" height="1" fill="var(--text-primary)"/>
-					<rect x="5" y="8" width="1" height="1" fill="var(--text-primary)"/>
-					<rect x="6" y="7" width="1" height="1" fill="var(--text-primary)"/>
-					<rect x="7" y="6" width="1" height="1" fill="var(--text-primary)"/>
-					<!-- Pivot -->
-					<rect x="7" y="7" width="2" height="2" fill="var(--accent)"/>
-					<!-- Blade right -->
-					<rect x="9" y="6" width="1" height="1" fill="var(--text-primary)"/>
-					<rect x="10" y="7" width="1" height="1" fill="var(--text-primary)"/>
-					<rect x="11" y="8" width="1" height="1" fill="var(--text-primary)"/>
-					<rect x="12" y="9" width="1" height="1" fill="var(--text-primary)"/>
-					<!-- Handle right -->
-					<rect x="13" y="10" width="2" height="2" fill="var(--accent)"/>
-					<rect x="12" y="11" width="2" height="2" fill="var(--accent)"/>
-					<rect x="14" y="11" width="2" height="2" fill="var(--brown)"/>
-					<rect x="13" y="12" width="2" height="1" fill="var(--brown)"/>
+				<!-- Pixel art scissors — 24x24 grid, clearly recognizable -->
+				<svg class="pixel-scissors" width="192" height="192" viewBox="0 0 24 24" shape-rendering="crispEdges">
+					<!-- Left handle (ring) -->
+					<rect x="1" y="15" width="1" height="1" fill="var(--brown)"/>
+					<rect x="0" y="16" width="1" height="2" fill="var(--brown)"/>
+					<rect x="1" y="18" width="1" height="1" fill="var(--brown)"/>
+					<rect x="2" y="15" width="1" height="1" fill="var(--brown)"/>
+					<rect x="3" y="16" width="1" height="2" fill="var(--brown)"/>
+					<rect x="2" y="18" width="1" height="1" fill="var(--brown)"/>
+					<!-- Left handle fill -->
+					<rect x="1" y="16" width="2" height="2" fill="var(--accent-dim)"/>
+					<!-- Left blade -->
+					<rect x="3" y="14" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="4" y="13" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="5" y="12" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="6" y="11" width="2" height="1" fill="var(--text-primary)"/>
+					<rect x="8" y="10" width="2" height="1" fill="var(--text-primary)"/>
+					<rect x="10" y="9" width="1" height="1" fill="var(--text-primary)"/>
+					<!-- Left blade edge highlight -->
+					<rect x="4" y="14" width="1" height="1" fill="var(--accent-border)"/>
+					<rect x="5" y="13" width="1" height="1" fill="var(--accent-border)"/>
+					<rect x="6" y="12" width="2" height="1" fill="var(--accent-border)"/>
+					<rect x="8" y="11" width="2" height="1" fill="var(--accent-border)"/>
+					<rect x="10" y="10" width="1" height="1" fill="var(--accent-border)"/>
+					<!-- Pivot screw -->
+					<rect x="11" y="9" width="2" height="2" fill="var(--accent)"/>
+					<!-- Right blade -->
+					<rect x="13" y="9" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="14" y="10" width="2" height="1" fill="var(--text-primary)"/>
+					<rect x="16" y="11" width="2" height="1" fill="var(--text-primary)"/>
+					<rect x="18" y="12" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="19" y="13" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="20" y="14" width="1" height="1" fill="var(--text-primary)"/>
+					<!-- Right blade edge highlight -->
+					<rect x="13" y="10" width="1" height="1" fill="var(--accent-border)"/>
+					<rect x="14" y="11" width="2" height="1" fill="var(--accent-border)"/>
+					<rect x="16" y="12" width="2" height="1" fill="var(--accent-border)"/>
+					<rect x="18" y="13" width="1" height="1" fill="var(--accent-border)"/>
+					<rect x="19" y="14" width="1" height="1" fill="var(--accent-border)"/>
+					<!-- Right handle (ring) -->
+					<rect x="21" y="15" width="1" height="1" fill="var(--brown)"/>
+					<rect x="22" y="16" width="2" height="2" fill="var(--brown)"/>
+					<rect x="21" y="18" width="1" height="1" fill="var(--brown)"/>
+					<rect x="20" y="15" width="1" height="1" fill="var(--brown)"/>
+					<rect x="20" y="18" width="1" height="1" fill="var(--brown)"/>
+					<!-- Right handle fill -->
+					<rect x="21" y="16" width="1" height="2" fill="var(--accent-dim)"/>
+					<!-- Blades top (V shape closing toward pivot) -->
+					<rect x="10" y="8" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="9" y="7" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="8" y="6" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="7" y="5" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="13" y="8" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="14" y="7" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="15" y="6" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="16" y="5" width="1" height="1" fill="var(--text-primary)"/>
+					<!-- Blade tips -->
+					<rect x="6" y="4" width="1" height="1" fill="var(--accent)"/>
+					<rect x="17" y="4" width="1" height="1" fill="var(--accent)"/>
 				</svg>
 				<!-- Pixel art comb -->
-				<svg class="pixel-comb" width="100" height="60" viewBox="0 0 16 8" shape-rendering="crispEdges">
+				<svg class="pixel-comb" width="160" height="56" viewBox="0 0 20 7" shape-rendering="crispEdges">
 					<!-- Spine -->
-					<rect x="1" y="0" width="14" height="2" fill="var(--brown)"/>
-					<!-- Teeth -->
-					<rect x="2" y="2" width="1" height="4" fill="var(--accent)"/>
-					<rect x="4" y="2" width="1" height="4" fill="var(--accent)"/>
-					<rect x="6" y="2" width="1" height="4" fill="var(--accent)"/>
-					<rect x="8" y="2" width="1" height="4" fill="var(--accent)"/>
-					<rect x="10" y="2" width="1" height="4" fill="var(--accent)"/>
-					<rect x="12" y="2" width="1" height="4" fill="var(--accent)"/>
-					<rect x="14" y="2" width="1" height="3" fill="var(--accent)"/>
-					<!-- Short teeth -->
-					<rect x="3" y="2" width="1" height="3" fill="var(--accent-border)"/>
-					<rect x="5" y="2" width="1" height="3" fill="var(--accent-border)"/>
-					<rect x="7" y="2" width="1" height="3" fill="var(--accent-border)"/>
-					<rect x="9" y="2" width="1" height="3" fill="var(--accent-border)"/>
-					<rect x="11" y="2" width="1" height="3" fill="var(--accent-border)"/>
-					<rect x="13" y="2" width="1" height="3" fill="var(--accent-border)"/>
+					<rect x="0" y="0" width="20" height="2" fill="var(--brown)"/>
+					<rect x="0" y="2" width="20" height="1" fill="var(--accent-border)"/>
+					<!-- Teeth (long) -->
+					<rect x="1" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="3" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="5" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="7" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="9" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="11" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="13" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="15" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="17" y="3" width="1" height="4" fill="var(--accent)"/>
+					<rect x="19" y="3" width="1" height="3" fill="var(--accent)"/>
+					<!-- Teeth (short, between long) -->
+					<rect x="2" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="4" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="6" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="8" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="10" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="12" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="14" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="16" y="3" width="1" height="2" fill="var(--accent-border)"/>
+					<rect x="18" y="3" width="1" height="2" fill="var(--accent-border)"/>
 				</svg>
 				<!-- Sparkle pixels -->
 				<div class="sparkle s1"></div>
@@ -246,13 +286,21 @@
 	}
 
 	.hero-content h1 {
+		margin-bottom: 12px;
+	}
+
+	.hero-tagline {
+		font-family: var(--font-display);
+		font-size: clamp(20px, 3vw, 28px);
+		color: var(--accent);
 		margin-bottom: 24px;
+		font-weight: 600;
 	}
 
 	.pixel-cursor {
 		display: inline-block;
-		width: 8px;
-		height: 0.85em;
+		width: 6px;
+		height: 0.8em;
 		background: var(--accent);
 		margin-left: 4px;
 		vertical-align: baseline;
@@ -294,25 +342,23 @@
 	}
 
 	.pixel-scissors {
-		animation: scissors-snip 2s steps(3) infinite;
-		filter: drop-shadow(3px 3px 0 rgba(26, 17, 8, 0.5));
+		animation: scissors-float 4s ease-in-out infinite;
+		filter: drop-shadow(4px 4px 0 rgba(26, 17, 8, 0.4));
 	}
 
-	@keyframes scissors-snip {
-		0%, 100% { transform: rotate(0deg); }
-		25% { transform: rotate(-8deg); }
-		50% { transform: rotate(0deg); }
-		75% { transform: rotate(8deg); }
+	@keyframes scissors-float {
+		0%, 100% { transform: translateY(0) rotate(0deg); }
+		50% { transform: translateY(-8px) rotate(3deg); }
 	}
 
 	.pixel-comb {
-		animation: comb-slide 3s steps(6) infinite;
-		filter: drop-shadow(3px 3px 0 rgba(26, 17, 8, 0.5));
+		animation: comb-float 5s ease-in-out infinite;
+		filter: drop-shadow(4px 4px 0 rgba(26, 17, 8, 0.4));
 	}
 
-	@keyframes comb-slide {
-		0%, 100% { transform: translateX(0); }
-		50% { transform: translateX(12px); }
+	@keyframes comb-float {
+		0%, 100% { transform: translateY(0) rotate(0deg); }
+		50% { transform: translateY(-6px) rotate(-2deg); }
 	}
 
 	.sparkle {
@@ -320,17 +366,16 @@
 		width: 6px;
 		height: 6px;
 		background: var(--accent);
-		animation: sparkle-blink 1.5s steps(1) infinite;
+		animation: sparkle-blink 2s ease-in-out infinite;
 	}
 
-	.s1 { top: 20px; right: 30px; animation-delay: 0s; }
-	.s2 { bottom: 30px; left: 20px; animation-delay: 0.5s; }
-	.s3 { top: 50%; right: 15px; animation-delay: 1s; }
+	.s1 { top: 10px; right: 20px; animation-delay: 0s; }
+	.s2 { bottom: 20px; left: 10px; animation-delay: 0.7s; }
+	.s3 { top: 45%; right: 5px; animation-delay: 1.3s; }
 
 	@keyframes sparkle-blink {
-		0%, 40% { opacity: 1; }
-		50%, 90% { opacity: 0; }
-		100% { opacity: 1; }
+		0%, 100% { opacity: 0.2; transform: scale(1); }
+		50% { opacity: 1; transform: scale(1.5); }
 	}
 
 	/* Services */

@@ -5,9 +5,9 @@
 
 <svelte:head>
 	<title>Book a cut — Spurgeon's Barber | Kelowna</title>
-	<meta name="description" content="Book a haircut with Jordan Killam at Good Vibes Barbershop, 2995 Pandosy St, Kelowna. DM on Instagram, walk in Mon-Fri 8am-4pm, or ask about house calls." />
+	<meta name="description" content="Book a haircut with Jordan Killam at Good Vibes Barbershop, 2995 Pandosy St, Kelowna. Call 226-201-3911, DM on Instagram, walk in Mon-Fri 8am-4pm, or ask about house calls." />
 	<meta property="og:title" content="Book a Cut — Spurgeon's Barber" />
-	<meta property="og:description" content="DM, walk in, or request a house call. Mon-Fri 8am-4pm at Good Vibes Barbershop." />
+	<meta property="og:description" content="Call, DM, walk in, or request a house call. Mon-Fri 8am-4pm at Good Vibes Barbershop." />
 	<link rel="canonical" href="https://spurgeons-barber.pages.dev/book" />
 </svelte:head>
 
@@ -16,7 +16,7 @@
 		<PixelLabel text="Book" />
 		<h1>Book your cut</h1>
 		<p class="hero-sub">
-			Three ways to get in the chair. Pick whatever works for you.
+			Four ways to get in the chair. Pick whatever works for you.
 		</p>
 	</div>
 </section>
@@ -40,6 +40,19 @@
 			</ScrollReveal>
 
 			<ScrollReveal delay={120}>
+				<a href="tel:2262013911" class="booking-card">
+					<div class="card-icon" aria-hidden="true">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+						</svg>
+					</div>
+					<h3>Call or text</h3>
+					<p>Reach me at 226-201-3911 to book an appointment or ask about availability. Calls and texts welcome.</p>
+					<span class="card-action">226-201-3911</span>
+				</a>
+			</ScrollReveal>
+
+			<ScrollReveal delay={240}>
 				<div class="booking-card">
 					<div class="card-icon" aria-hidden="true">
 						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -62,7 +75,7 @@
 				</div>
 			</ScrollReveal>
 
-			<ScrollReveal delay={240}>
+			<ScrollReveal delay={360}>
 				<div class="booking-card">
 					<div class="card-icon" aria-hidden="true">
 						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -130,7 +143,7 @@
 
 	.booking-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 24px;
 	}
 

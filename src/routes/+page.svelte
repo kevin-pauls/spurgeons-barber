@@ -13,9 +13,9 @@
 </script>
 
 <svelte:head>
-	<title>Spurgeon's Barber — Stay Sharp | Kelowna barber</title>
+	<title>Spurgeon's Barber — Get a Haircut | Kelowna barber</title>
 	<meta name="description" content="Spurgeon's Barber — Kelowna's geekiest barber. Jordan Killam specializes in curly hair and traditional styles at Good Vibes Barbershop. Book your cut today." />
-	<meta property="og:title" content="Spurgeon's Barber — Stay Sharp" />
+	<meta property="og:title" content="Spurgeon's Barber — Get a Haircut" />
 	<meta property="og:description" content="Kelowna's geekiest barber. Curly hair, traditional styles, house calls." />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://spurgeons-barber.pages.dev" />
@@ -70,17 +70,50 @@
 	</div>
 </section>
 
-<!-- Stay Sharp Statement -->
-<section class="stay-sharp">
-	<div class="container stay-sharp-inner">
+<!-- Get a Haircut Statement -->
+<section class="tagline-band">
+	<div class="container tagline-inner">
 		<ScrollReveal pixel>
-			<p class="stay-sharp-text">STAY SHARP</p>
+			<p class="tagline-text">GET A HAIRCUT</p>
 		</ScrollReveal>
 		<ScrollReveal>
-			<p class="stay-sharp-desc">
+			<p class="tagline-desc">
 				A good haircut is not just about looking right — it is about feeling like yourself. I bring competition-level technique, genuine care for your hair, and a space where everyone is welcome. No egos. Just craft.
 			</p>
 		</ScrollReveal>
+	</div>
+</section>
+
+<!-- Reviews -->
+<section class="section reviews-section">
+	<div class="container">
+		<ScrollReveal>
+			<PixelLabel text="Reviews" />
+			<h2>What clients say</h2>
+		</ScrollReveal>
+		<div class="reviews-grid">
+			<ScrollReveal delay={0}>
+				<div class="review-card featured">
+					<div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+					<blockquote>"Jordan is hands down the best barber. Extremely talented, very passionate — takes time to make you comfortable and gives expert styling advice."</blockquote>
+					<cite>Google Review · Limitless Barbers, London ON</cite>
+				</div>
+			</ScrollReveal>
+			<ScrollReveal delay={120}>
+				<div class="review-card">
+					<div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+					<blockquote>"Precise cuts and incredible attention to detail. Modern, sharp styles every single time. I specifically ask for Jordan."</blockquote>
+					<cite>Google Review · Man Made Barbershop, Kelowna BC</cite>
+				</div>
+			</ScrollReveal>
+			<ScrollReveal delay={240}>
+				<div class="review-card">
+					<div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+					<blockquote>"Top-notch quality — I could confidently say it is one of, if not my best haircut, ever."</blockquote>
+					<cite>Blake Carstensen · Good Vibes Barbershop</cite>
+				</div>
+			</ScrollReveal>
+		</div>
 	</div>
 </section>
 
@@ -221,7 +254,7 @@
 
 	.pole-segment:nth-child(3n+1) { background: var(--accent); }
 	.pole-segment:nth-child(3n+2) { background: var(--bg-cream); }
-	.pole-segment:nth-child(3n) { background: #e53e3e; }
+	.pole-segment:nth-child(3n) { background: var(--brown); }
 
 	@keyframes pole-spin {
 		from { transform: translateY(0); }
@@ -247,33 +280,87 @@
 		text-align: center;
 	}
 
-	/* Stay Sharp */
-	.stay-sharp {
+	/* Tagline Band */
+	.tagline-band {
 		background: var(--bg-cream);
 		padding: var(--section-padding) 0;
 		text-align: center;
 	}
 
-	.stay-sharp-inner {
+	.tagline-inner {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 24px;
 	}
 
-	.stay-sharp-text {
+	.tagline-text {
 		font-family: var(--font-pixel);
 		font-size: clamp(24px, 5vw, 48px);
 		color: var(--text-on-cream);
 		letter-spacing: 0.05em;
 	}
 
-	.stay-sharp-desc {
+	.tagline-desc {
 		font-size: 18px;
 		color: var(--text-on-cream);
 		max-width: 600px;
 		line-height: 1.8;
 		opacity: 0.8;
+	}
+
+	/* Reviews */
+	.reviews-section {
+		background: var(--bg-secondary);
+		border-top: 2px solid var(--border-default);
+		border-bottom: 2px solid var(--border-default);
+	}
+
+	.reviews-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		margin-top: 40px;
+	}
+
+	.review-card {
+		border: 2px solid var(--border-default);
+		padding: 32px;
+		background: var(--bg-primary);
+		transition: all var(--transition-normal);
+	}
+
+	.review-card.featured {
+		border-color: var(--accent-border);
+		background: var(--accent-dim);
+	}
+
+	.review-card:hover {
+		transform: translate(-2px, -2px);
+		box-shadow: var(--shadow-brutal);
+		border-color: var(--accent-border);
+	}
+
+	.review-stars {
+		color: var(--accent);
+		font-size: 16px;
+		letter-spacing: 2px;
+		margin-bottom: 16px;
+	}
+
+	.review-card blockquote {
+		font-size: 15px;
+		color: var(--text-primary);
+		line-height: 1.7;
+		margin: 0 0 16px 0;
+	}
+
+	.review-card cite {
+		font-family: var(--font-pixel);
+		font-size: 8px;
+		color: var(--text-tertiary);
+		letter-spacing: 0.05em;
+		font-style: normal;
 	}
 
 	/* About Preview */
@@ -299,7 +386,7 @@
 	.placeholder-label {
 		font-family: var(--font-pixel);
 		font-size: 14px;
-		color: rgba(245, 240, 232, 0.1);
+		color: rgba(242, 224, 176, 0.1);
 		letter-spacing: 0.15em;
 	}
 
@@ -341,6 +428,12 @@
 		.hero {
 			min-height: auto;
 			padding: 100px 0 64px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.reviews-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 

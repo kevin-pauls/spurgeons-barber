@@ -25,10 +25,11 @@
 		"openingHoursSpecification": [
 			{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:00" }
 		],
+		"telephone": "+12262013911",
 		"priceRange": "$$",
 		"aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "50" },
 		"founder": { "@type": "Person", "name": "Jordan Killam" },
-		"slogan": "Stay Sharp",
+		"slogan": "Get a Haircut",
 		"areaServed": "Kelowna"
 	})}</script>`}
 </svelte:head>
@@ -41,26 +42,29 @@
 
 <style>
 	:global(:root) {
-		--bg-primary: #1a1a1a;
-		--bg-secondary: #222222;
-		--bg-tertiary: #2a2a2a;
-		--bg-elevated: #333333;
-		--bg-cream: #F5F0E8;
-		--bg-cream-dark: #E8E0D4;
+		--bg-primary: #1A1108;
+		--bg-secondary: #2A1F10;
+		--bg-tertiary: #362915;
+		--bg-elevated: #3D2E18;
+		--bg-cream: #F2E0B0;
+		--bg-cream-dark: #E4D09A;
 
-		--accent: #39FF14;
-		--accent-dim: rgba(57, 255, 20, 0.15);
-		--accent-border: rgba(57, 255, 20, 0.3);
+		--accent: #C9A84C;
+		--accent-dim: rgba(201, 168, 76, 0.12);
+		--accent-border: rgba(201, 168, 76, 0.35);
 
-		--text-primary: #F5F0E8;
-		--text-secondary: #b8b0a4;
-		--text-tertiary: #7a7168;
+		--brown: #A0622A;
+		--brown-dark: #7A4820;
+
+		--text-primary: #F2E0B0;
+		--text-secondary: rgba(242, 224, 176, 0.75);
+		--text-tertiary: rgba(242, 224, 176, 0.35);
 		--text-accent: var(--accent);
-		--text-on-cream: #1a1a1a;
+		--text-on-cream: #1A1108;
 
-		--border-subtle: rgba(245, 240, 232, 0.08);
-		--border-default: rgba(245, 240, 232, 0.15);
-		--border-hover: rgba(245, 240, 232, 0.25);
+		--border-subtle: rgba(201, 168, 76, 0.08);
+		--border-default: rgba(201, 168, 76, 0.18);
+		--border-hover: rgba(201, 168, 76, 0.35);
 		--border-accent: var(--accent-border);
 
 		--font-display: 'Clash Display', 'Space Grotesk', system-ui, sans-serif;
@@ -76,8 +80,8 @@
 		--radius-sm: 4px;
 		--radius-md: 8px;
 
-		--shadow-card: 4px 4px 0 rgba(245, 240, 232, 0.1);
-		--shadow-card-hover: 6px 6px 0 var(--accent-dim);
+		--shadow-card: 4px 4px 0 rgba(201, 168, 76, 0.1);
+		--shadow-card-hover: 6px 6px 0 rgba(201, 168, 76, 0.15);
 		--shadow-brutal: 4px 4px 0 var(--accent);
 
 		--transition-fast: 0.15s ease;
@@ -208,7 +212,7 @@
 
 	:global(.btn-outline:hover) {
 		transform: translate(-2px, -2px);
-		box-shadow: 6px 6px 0 rgba(245, 240, 232, 0.15);
+		box-shadow: 6px 6px 0 rgba(201, 168, 76, 0.15);
 		border-color: var(--accent);
 		color: var(--accent);
 	}

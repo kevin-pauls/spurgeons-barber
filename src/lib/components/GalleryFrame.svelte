@@ -64,9 +64,9 @@
 		height: 8px;
 	}
 
-	.dot-red { background: #e53e3e; }
-	.dot-yellow { background: #F59E0B; }
-	.dot-green { background: var(--accent); }
+	.dot-red { background: var(--brown); }
+	.dot-yellow { background: var(--accent); }
+	.dot-green { background: var(--bg-cream); }
 
 	.titlebar-text {
 		font-family: var(--font-pixel);

@@ -25,7 +25,7 @@
 			-45deg,
 			var(--accent) 0 4px,
 			var(--bg-cream) 4px 8px,
-			#e53e3e 8px 12px,
+			var(--brown) 8px 12px,
 			var(--bg-cream) 12px 16px
 		);
 		background-size: 22.63px 100%;

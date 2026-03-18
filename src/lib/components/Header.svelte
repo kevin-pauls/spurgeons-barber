@@ -38,7 +38,7 @@
 	<div class="container header-inner">
 		<a href="/" class="logo" onclick={closeMobile}>
 			<span class="logo-pixel" aria-hidden="true"></span>
-			<span class="logo-text">SPURGEON'S</span>
+			<span class="logo-text">SPURGEON'S BARBER</span>
 		</a>
 
 		<nav class="desktop-nav" aria-label="Main navigation">

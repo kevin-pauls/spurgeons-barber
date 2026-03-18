@@ -17,7 +17,7 @@
 			<div class="footer-col brand-col">
 				<a href="/" class="footer-logo">
 					<span class="logo-pixel" aria-hidden="true"></span>
-					<span class="logo-text">SPURGEON'S</span>
+					<span class="logo-text">SPURGEON'S BARBER</span>
 				</a>
 				<p class="tagline">Get a Haircut</p>
 				<p class="brand-desc">

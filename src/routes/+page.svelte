@@ -29,7 +29,7 @@
 		<div class="hero-content">
 			<PixelLabel text="Kelowna barber" />
 			<h1>
-				The geek<br />with the sleek<span class="pixel-cursor" aria-hidden="true"></span>
+				The geek<br />with the sleek mullet<span class="pixel-cursor" aria-hidden="true"></span>
 			</h1>
 			<p class="hero-sub">
 				Precision cuts from a competition-trained barber who geeks out on craft. Curly hair specialist. Traditional styles expert. Based at Good Vibes Barbershop, Kelowna.
@@ -40,10 +40,57 @@
 			</div>
 		</div>
 		<div class="hero-art" aria-hidden="true">
-			<div class="pixel-barber-pole">
-				{#each Array(12) as _, i}
-					<div class="pole-segment" style="--i: {i}"></div>
-				{/each}
+			<div class="pixel-scene">
+				<!-- Pixel art scissors -->
+				<svg class="pixel-scissors" width="120" height="120" viewBox="0 0 16 16" shape-rendering="crispEdges">
+					<!-- Handle left -->
+					<rect x="1" y="10" width="2" height="2" fill="var(--accent)"/>
+					<rect x="2" y="11" width="2" height="2" fill="var(--accent)"/>
+					<rect x="3" y="12" width="2" height="2" fill="var(--accent)"/>
+					<rect x="0" y="11" width="2" height="2" fill="var(--brown)"/>
+					<rect x="1" y="12" width="2" height="1" fill="var(--brown)"/>
+					<!-- Blade left -->
+					<rect x="4" y="9" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="5" y="8" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="6" y="7" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="7" y="6" width="1" height="1" fill="var(--text-primary)"/>
+					<!-- Pivot -->
+					<rect x="7" y="7" width="2" height="2" fill="var(--accent)"/>
+					<!-- Blade right -->
+					<rect x="9" y="6" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="10" y="7" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="11" y="8" width="1" height="1" fill="var(--text-primary)"/>
+					<rect x="12" y="9" width="1" height="1" fill="var(--text-primary)"/>
+					<!-- Handle right -->
+					<rect x="13" y="10" width="2" height="2" fill="var(--accent)"/>
+					<rect x="12" y="11" width="2" height="2" fill="var(--accent)"/>
+					<rect x="14" y="11" width="2" height="2" fill="var(--brown)"/>
+					<rect x="13" y="12" width="2" height="1" fill="var(--brown)"/>
+				</svg>
+				<!-- Pixel art comb -->
+				<svg class="pixel-comb" width="100" height="60" viewBox="0 0 16 8" shape-rendering="crispEdges">
+					<!-- Spine -->
+					<rect x="1" y="0" width="14" height="2" fill="var(--brown)"/>
+					<!-- Teeth -->
+					<rect x="2" y="2" width="1" height="4" fill="var(--accent)"/>
+					<rect x="4" y="2" width="1" height="4" fill="var(--accent)"/>
+					<rect x="6" y="2" width="1" height="4" fill="var(--accent)"/>
+					<rect x="8" y="2" width="1" height="4" fill="var(--accent)"/>
+					<rect x="10" y="2" width="1" height="4" fill="var(--accent)"/>
+					<rect x="12" y="2" width="1" height="4" fill="var(--accent)"/>
+					<rect x="14" y="2" width="1" height="3" fill="var(--accent)"/>
+					<!-- Short teeth -->
+					<rect x="3" y="2" width="1" height="3" fill="var(--accent-border)"/>
+					<rect x="5" y="2" width="1" height="3" fill="var(--accent-border)"/>
+					<rect x="7" y="2" width="1" height="3" fill="var(--accent-border)"/>
+					<rect x="9" y="2" width="1" height="3" fill="var(--accent-border)"/>
+					<rect x="11" y="2" width="1" height="3" fill="var(--accent-border)"/>
+					<rect x="13" y="2" width="1" height="3" fill="var(--accent-border)"/>
+				</svg>
+				<!-- Sparkle pixels -->
+				<div class="sparkle s1"></div>
+				<div class="sparkle s2"></div>
+				<div class="sparkle s3"></div>
 			</div>
 		</div>
 	</div>
@@ -237,28 +284,53 @@
 		justify-content: center;
 	}
 
-	.pixel-barber-pole {
+	.pixel-scene {
 		display: flex;
 		flex-direction: column;
-		width: 80px;
-		gap: 0;
-		border: 3px solid var(--border-default);
-		overflow: hidden;
-		animation: pole-spin 4s linear infinite;
+		align-items: center;
+		gap: 24px;
+		position: relative;
+		padding: 40px;
 	}
 
-	.pole-segment {
-		height: 24px;
-		background: var(--bg-tertiary);
+	.pixel-scissors {
+		animation: scissors-snip 2s steps(3) infinite;
+		filter: drop-shadow(3px 3px 0 rgba(26, 17, 8, 0.5));
 	}
 
-	.pole-segment:nth-child(3n+1) { background: var(--accent); }
-	.pole-segment:nth-child(3n+2) { background: var(--bg-cream); }
-	.pole-segment:nth-child(3n) { background: var(--brown); }
+	@keyframes scissors-snip {
+		0%, 100% { transform: rotate(0deg); }
+		25% { transform: rotate(-8deg); }
+		50% { transform: rotate(0deg); }
+		75% { transform: rotate(8deg); }
+	}
 
-	@keyframes pole-spin {
-		from { transform: translateY(0); }
-		to { transform: translateY(-72px); }
+	.pixel-comb {
+		animation: comb-slide 3s steps(6) infinite;
+		filter: drop-shadow(3px 3px 0 rgba(26, 17, 8, 0.5));
+	}
+
+	@keyframes comb-slide {
+		0%, 100% { transform: translateX(0); }
+		50% { transform: translateX(12px); }
+	}
+
+	.sparkle {
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		background: var(--accent);
+		animation: sparkle-blink 1.5s steps(1) infinite;
+	}
+
+	.s1 { top: 20px; right: 30px; animation-delay: 0s; }
+	.s2 { bottom: 30px; left: 20px; animation-delay: 0.5s; }
+	.s3 { top: 50%; right: 15px; animation-delay: 1s; }
+
+	@keyframes sparkle-blink {
+		0%, 40% { opacity: 1; }
+		50%, 90% { opacity: 0; }
+		100% { opacity: 1; }
 	}
 
 	/* Services */
